@@ -27,26 +27,28 @@ export const MyTodoProvider = ({ children }) => {
     });
   };
 
-  const updateTodo=(_id)=>{
-    alert(_id)
-    console.log(add)
-    // setAdd((preVal)=>{
-    //   let filterUpData=preVal.map((val)=>{
-    //     if(val.id===_id){
+  const updateTodo = (_id, value) => {
 
-    //       add
-    //     }
-    //     else{
-    //       preVal
-    //     }
+    setAdd((preVal) => {
+      let filterUpData = preVal.map((val) => {
+        if (val.id ==_id) {
+        
+        return {...val,dodoValue:value}
+        } else {
+          
+         return val;
+        
+        }
+      });
 
-    //   })
 
-    //   console.log(filterUpData)
-    // })
-  }
+      console.log(filterUpData)
+      localStorage.setItem("addTodaData", JSON.stringify(filterUpData));
+      return filterUpData
+    });
+  };
   return (
-    <MyContext.Provider value={{ add, setAdd, addfun, deleteTodo,updateTodo }}>
+    <MyContext.Provider value={{ add, setAdd, addfun, deleteTodo, updateTodo }}>
       {children}
     </MyContext.Provider>
   );

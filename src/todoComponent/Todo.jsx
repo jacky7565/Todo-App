@@ -29,8 +29,15 @@ const Todo = () => {
     setEditVal(value);
   };
 
-
-
+  let updateHandler = (_id) => {
+    if (!editVal) {
+      alert("Enter value");
+      return;
+    }
+    updateTodo(_id, editVal);
+    setEditVal("");
+    setCheckEdit("");
+  };
 
   return (
     <div className="grocery-container">
@@ -43,7 +50,7 @@ const Todo = () => {
                 type="text"
                 placeholder="Update something to your list"
                 value={editVal}
-                onClick={(e) => setEditVal(e.target.value)}
+                onChange={(e) => setEditVal(e.target.value)}
               />
             ) : (
               <span>{val.dodoValue}</span>

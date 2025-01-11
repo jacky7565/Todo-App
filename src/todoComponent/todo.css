@@ -1,0 +1,153 @@
+/* Main container */
+.grocery-container {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    padding: 20px;
+    max-width: 400px;
+    margin: 50px auto;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    font-family: Arial, sans-serif;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  h1 {
+    font-size: 24px;
+    text-decoration: underline;
+  }
+  
+  /* Item list */
+  .item-list {
+    margin: 20px 0;
+  }
+  
+  .item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #8e2de2;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+  
+  .item span {
+    font-size: 16px;
+    word-wrap: break-word;
+  }
+  
+  /* Buttons for delete and edit */
+  .delete-btn,
+  .edit-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-size: 18px;
+    margin-left: 5px;
+  }
+  
+  /* Input container */
+  .input-container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin: 20px 0;
+  }
+  
+  input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+  }
+  
+  .add-btn {
+    background: #6a11cb;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  
+  .add-btn:hover {
+    background: #2575fc;
+  }
+  
+  /* Delete List button */
+  .clear-btn {
+    background: white;
+    color: #6a11cb;
+    border: 2px solid #6a11cb;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .clear-btn:hover {
+    background: #6a11cb;
+    color: white;
+  }
+  
+  /* Media Queries for Responsiveness */
+  
+  /* Smaller devices like phones */
+  @media (max-width: 480px) {
+    .grocery-container {
+      width: 90%;
+      padding: 15px;
+    }
+  
+    .item {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .delete-btn,
+    .edit-btn {
+      margin: 5px 0;
+    }
+  
+    .input-container {
+      flex-direction: column;
+    }
+  
+    input {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  
+    .add-btn {
+      width: 100%;
+    }
+  
+    .clear-btn {
+      width: 100%;
+    }
+  }
+  
+  /* Tablets and medium devices */
+  @media (max-width: 768px) {
+    .grocery-container {
+      max-width: 500px;
+    }
+  
+    h1 {
+      font-size: 22px;
+    }
+  
+    input {
+      font-size: 14px;
+    }
+  
+    .add-btn,
+    .clear-btn {
+      font-size: 14px;
+      padding: 8px;
+    }
+  }
+  
